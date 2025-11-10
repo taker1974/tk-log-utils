@@ -4,12 +4,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <groupId>io.github.taker1974</groupId>
+    <groupId>ru.spb.tksoft</groupId>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tk-log-utils</artifactId>
     <name>tk-log-utils</name>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
     <url>https://github.com/taker1974/tk-log-utils</url>
     <description>Log utils.</description>
 
