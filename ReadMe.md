@@ -86,10 +86,6 @@ mvn clean install
 mvn compile javadoc:javadoc
 ```
 
-## API
-
-See [javadoc](https://github.com/taker1974/tk-log-utils/blob/main/javadoc/) folder for documentation.
-
 ## Author
 
 Konstantin Terskikh  
