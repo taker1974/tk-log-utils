@@ -3,25 +3,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>ru.spb.tksoft</groupId>
-        <artifactId>flow-forge</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+    <groupId>ru.spb.tksoft</groupId>
+    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tk-log-utils</artifactId>
     <name>tk-log-utils</name>
-    <version>2.0.0</version>
-    <url>http://tksoft.spb.ru</url>
-    <description>TKSoft log utils.</description>
+    <version>2.0.1</version>
+    <url>https://github.com/taker1974/tk-log-utils</url>
+    <description>Log utils.</description>
 
     <licenses>
         <license>
-            <name>The MIT License (MIT)</name>
-            <url>https://mit-license.org/</url>
+            <name>Apache License 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
         </license>
     </licenses>
 
@@ -35,13 +30,26 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:taker1974/flow-forge.git</connection>
-        <developerConnection>scm:git:ssh://github.com:taker1974/flow-forge.git</developerConnection>
-        <url>https://github.com/taker1974/flow-forge/tree/main</url>
+        <connection>scm:git:git@github.com:taker1974/tk-log-utils.git</connection>
+        <developerConnection>scm:git:ssh://github.com:taker1974/tk-log-utils.git</developerConnection>
+        <url>https://github.com/taker1974/tk-log-utils/tree/main</url>
     </scm>
 
     <properties>
-        <!-- Inherited from parent -->
+        <java.version>21</java.version>
+
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <slf4j.version>2.0.7</slf4j.version>
+        <assertj.version>3.24.2</assertj.version>
+        <junit-jupiter.version>5.10.2</junit-jupiter.version>
+        <mockito.version>5.8.0</mockito.version>
+        <maven-compiler.version>3.11.0</maven-compiler.version>
+        <maven-jar.version>3.4.0</maven-jar.version>
+        <maven-source.version>3.3.1</maven-source.version>
+        <maven-javadoc.version>3.6.2</maven-javadoc.version>
     </properties>
 
     <dependencies>
