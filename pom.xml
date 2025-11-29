@@ -105,7 +105,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Automatic-Module-Name>tk.log.utils</Automatic-Module-Name>
+                            <Automatic-Module-Name>ru.spb.tksoft.utils.log</Automatic-Module-Name>
                         </manifestEntries>
                     </archive>
                 </configuration>
