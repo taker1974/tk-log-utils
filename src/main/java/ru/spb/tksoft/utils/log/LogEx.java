@@ -1,17 +1,15 @@
 /*
  * Copyright 2025 Konstantin Terskikh
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
  */
 
 package ru.spb.tksoft.utils.log;
@@ -26,19 +24,7 @@ import java.util.concurrent.ConcurrentMap;
  *
  * @author Konstantin Terskikh, kostus.online.1974@yandex.ru, 2025
  */
-public final class LogEx {
-
-    /** Common phrase 'starting'. */
-    public static final String STARTING = "starting";
-    /** Common phrase 'finishing'. */
-    public static final String STOPPING = "finishing";
-    /** Common phrase 'finished'. */
-    public static final String STOPPED = "finished";
-    /** Common phrase 'starting -> finishing'. */
-    public static final String SHORT_RUN = "starting -> finishing";
-
-    /** Common phrase 'exception thrown'. */
-    public static final String EXCEPTION_THROWN = "exception thrown";
+public final class LogEx extends LogBase {
 
     /** Cache for method names for better performance. */
     private static final ConcurrentMap<String, String> METHOD_NAME_CACHE =
@@ -92,8 +78,9 @@ public final class LogEx {
      * @param parts - the message parts.
      */
     public static void log(Logger logger, Level level, Object[] parts) {
+
         if (parts == null || parts.length == 0) {
-            logLevel(logger, level, "");
+            processLog(logger, level, "");
             return;
         }
 
@@ -109,7 +96,7 @@ public final class LogEx {
         }
 
         String message = builder.toString();
-        logLevel(logger, level, message);
+        processLog(logger, level, message);
     }
 
     /**
@@ -119,7 +106,7 @@ public final class LogEx {
      * @param level The logging level.
      * @param message The message to log.
      */
-    private static void logLevel(Logger logger, Level level, String message) {
+    private static void processLog(Logger logger, Level level, String message) {
         switch (level) {
             case TRACE -> logger.trace(message);
             case DEBUG -> logger.debug(message);
@@ -147,7 +134,6 @@ public final class LogEx {
      * @param parts The message parts.
      */
     public static void debug(Logger logger, Object... parts) {
-
         log(logger, Level.DEBUG, parts);
     }
 
@@ -158,7 +144,6 @@ public final class LogEx {
      * @param parts The message parts.
      */
     public static void info(Logger logger, Object... parts) {
-
         log(logger, Level.INFO, parts);
     }
 
@@ -169,7 +154,6 @@ public final class LogEx {
      * @param parts The message parts.
      */
     public static void warn(Logger logger, Object... parts) {
-
         log(logger, Level.WARN, parts);
     }
 
@@ -180,7 +164,6 @@ public final class LogEx {
      * @param parts The message parts.
      */
     public static void error(Logger logger, Object... parts) {
-
         log(logger, Level.ERROR, parts);
     }
 
