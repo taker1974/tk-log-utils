@@ -89,4 +89,4 @@ mvn compile javadoc:javadoc
 
 Константин Терских  
 Email: <kostus.online.1974@yandex.ru>, <kostus.online@gmail.com>  
-Санкт-Петербург 2025
+Санкт-Петербург 2025-2026
